@@ -37,4 +37,13 @@ public class Deck {
     {
 
     }
+    /*
+    Formatting
+    Welcome to Solitaire Prime!
+    1) New Deck
+    2) Display Deck
+    3) Shuffle Deck
+    4) Play Solitaire Prime
+    5) Exit
+     */
 }

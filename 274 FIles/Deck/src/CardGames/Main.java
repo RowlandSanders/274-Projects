@@ -38,6 +38,9 @@ public class Deck {
 
     }
     /*
+    Requests
+    1) Complete display, shuffle, deal, and cardsleft
+    2) Correct formatting and make a method to run 1000 games with no display functions other than score
     Formatting
     Welcome to Solitaire Prime!
     1) New Deck

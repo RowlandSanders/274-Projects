@@ -47,7 +47,8 @@
       <updated>1582249768624</updated>
       <workItem from="1582249774845" duration="2578000" />
       <workItem from="1582578223930" duration="6000" />
-      <workItem from="1582615494934" duration="956000" />
+      <workItem from="1582615494934" duration="1384000" />
+      <workItem from="1582953452379" duration="68000" />
     </task>
     <servers />
   </component>
@@ -59,17 +60,17 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="198" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1582336489715" />
-    <state x="446" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1582615549939">
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1582953454651">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="446" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1582615549939" />
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1582953454651" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/CardGames/Main.java</url>
-          <line>7</line>
+          <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

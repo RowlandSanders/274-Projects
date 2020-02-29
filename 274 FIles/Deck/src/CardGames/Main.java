@@ -1,5 +1,6 @@
 package CardGames;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Deck {
     private Card[] storage;
@@ -22,6 +23,8 @@ public class Deck {
             }
     }
     public void display()
+
+
     {
 
     }
@@ -33,7 +36,7 @@ public class Deck {
     {
 
     }
-    Public int cardsLeft()
+    public int cardsLeft()
     {
 
     }

@@ -23,22 +23,17 @@ public class Deck {
             }
     }
     public void display()
-
-
     {
-
+        while (deck.size() > 0) {
     }
     public void shuffle()
     {
-
     }
     public Card deal()
     {
-
     }
     public int cardsLeft()
     {
-
     }
     /*
     Requests

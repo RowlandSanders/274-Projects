@@ -1,3 +1,9 @@
+/*
+Rowland Sanders
+CECS 274-05
+Project 2: Sol Prime
+3/3/2020
+ */
 package CardGames;
 
 import java.util.Scanner;
@@ -38,6 +44,7 @@ public class main {
         }
 
         public static int menu(){
+            System.out.println("  ");
             System.out.println("1) New Deck");
             System.out.println("2) Display Deck");
             System.out.println("3) Shuffle Deck");

@@ -20,7 +20,7 @@ public class main {
                 return true;
             }
             else {
-                System.out.println("loser");
+                System.out.println("Loser");
                 return false;
             }
         }
@@ -29,7 +29,7 @@ public class main {
             if (num == 1){
                 return false;
             }
-            for(int i= 2; i < num/2; i++){
+            for(int i= 2; i < num; i++){
                 if (num % i == 0){
                     return false;
                 }
@@ -76,7 +76,7 @@ public class main {
                     else
                         lose++;
                     }
-                System.out.println("In 1000 games, you won:"+ win + " and lost: "+lose);
+                System.out.println("In 1000 games, you won: "+ win + " and lost: "+lose);
                 break;
                 }
 

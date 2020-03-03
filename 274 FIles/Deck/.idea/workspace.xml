@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1Y64ZvVukcaWlFKZj3jghZo6dfI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +30,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="CardGames.Main" />
       <module name="Deck" />
@@ -34,6 +41,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CardGames.main" />
+      <module name="Deck" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CardGames.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -48,7 +73,8 @@
       <workItem from="1582249774845" duration="2578000" />
       <workItem from="1582578223930" duration="6000" />
       <workItem from="1582615494934" duration="1384000" />
-      <workItem from="1582953452379" duration="327000" />
+      <workItem from="1582953452379" duration="355000" />
+      <workItem from="1583186601578" duration="9665000" />
     </task>
     <servers />
   </component>
@@ -60,20 +86,29 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="198" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1582336489715" />
-    <state x="446" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1582953454651">
+    <state width="1458" height="757" key="GridCell.Tab.0.bottom" timestamp="1583207034346">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="446" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1582953454651" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CardGames/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1458" height="757" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1583207034346" />
+    <state width="1458" height="757" key="GridCell.Tab.0.center" timestamp="1583207034346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="757" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1583207034346" />
+    <state width="1458" height="757" key="GridCell.Tab.0.left" timestamp="1583207034346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="757" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1583207034346" />
+    <state width="1458" height="757" key="GridCell.Tab.0.right" timestamp="1583207034346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="757" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1583207034346" />
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1583186634354">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1583186634354" />
+    <state x="406" y="159" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583187135177">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="406" y="159" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1500.960@0.0.1500.960" timestamp="1583187135177" />
   </component>
 </project>

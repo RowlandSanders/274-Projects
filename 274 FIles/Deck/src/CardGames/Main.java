@@ -83,6 +83,7 @@ public class main {
                     else
                         lose++;
                     }
+                System.out.println("  ");
                 System.out.println("In 1000 games, you won: "+ win + " and lost: "+lose);
                 break;
                 }

@@ -8,9 +8,7 @@ public class Card {
     {
         suit = s;
         rank = r;
-
     }
-
     public void display()
     {
     if(rank=='T'){

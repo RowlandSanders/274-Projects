@@ -7,9 +7,14 @@ public class LinkedList {
 
     public void display(){
         Node temp = head;
+        int count = 1;
         while(temp!=null){
             temp.display();
+            if(count%11==0){
+                System.out.println();
+            }
             temp=temp.getNext();
+            count++;
         }
     }
 

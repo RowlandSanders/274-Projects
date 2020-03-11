@@ -8,7 +8,7 @@ public class Node {
     }
 
     public void display(){
-        System.out.println(value + "  ");
+        System.out.print(value + "  ");
     }
 
     public Node getNext(){

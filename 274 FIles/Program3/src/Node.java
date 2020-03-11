@@ -1,6 +1,6 @@
 public class Node {
-    String value;
-    Node next;
+    private String value;
+    private Node next;
 
     public Node(String x){
         value = x;
@@ -24,8 +24,5 @@ public class Node {
         return value;
     }
 
-//    public void setValue(){
-//
-//    }
 
 }

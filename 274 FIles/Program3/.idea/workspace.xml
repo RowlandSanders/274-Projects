@@ -42,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583887103607</updated>
       <workItem from="1583887108994" duration="5143000" />
+      <workItem from="1583960683678" duration="821000" />
     </task>
     <servers />
   </component>
@@ -57,6 +58,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="532" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1583890688481" />
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1583960692816">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="446" y="304" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1583960692816" />
     <state x="175" y="100" key="new project wizard" timestamp="1583890689981">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

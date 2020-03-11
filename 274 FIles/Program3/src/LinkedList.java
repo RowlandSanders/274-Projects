@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class LinkedList {
     private Node head;
@@ -7,10 +8,21 @@ public class LinkedList {
     }
 
     public void display(){
-
+        Node temp = head;
+        while(temp!=null){
+            temp.display();
+            temp=temp.getNext();
+        }
     }
 
-    public void delete(){
+    public void delete(Node Nodep, LinkedList myList){     //delete node pointer
+        Random rand = new Random();
+        Node temp = Nodep.getNext();
+        Nodep.value = temp.getValue();
+        Nodep.next = temp.rand;
+        temp = null;
+
+    }
 
     }
 

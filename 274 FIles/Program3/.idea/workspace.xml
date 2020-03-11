@@ -41,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583887103607</updated>
-      <workItem from="1583887108994" duration="2289000" />
+      <workItem from="1583887108994" duration="5143000" />
     </task>
     <servers />
   </component>
@@ -49,6 +49,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="316" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1583891569048">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="499" y="316" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1500.960@0.0.1500.960" timestamp="1583891569048" />
     <state x="532" y="235" key="FileChooserDialogImpl" timestamp="1583890688481">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -57,5 +61,9 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="175" y="100" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1583890689981" />
+    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1583891750838">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="413" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1583891750838" />
   </component>
 </project>

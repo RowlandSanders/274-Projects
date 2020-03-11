@@ -1,6 +1,6 @@
 public class Node {
-    private String value;
-    private Node next;
+    String value;
+    Node next;
 
     public Node(String x){
         value = x;
@@ -8,7 +8,7 @@ public class Node {
     }
 
     public void display(){
-        System.out.println(value);
+        System.out.println(value + "  ");
     }
 
     public Node getNext(){

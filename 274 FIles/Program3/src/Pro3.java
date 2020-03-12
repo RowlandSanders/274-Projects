@@ -5,7 +5,6 @@ public class Pro3 {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        int temp = 0;
         LinkedList myList = new LinkedList();
         for(int i = 0;i<22;i++){
             myList.add(word());
@@ -20,15 +19,36 @@ public class Pro3 {
         System.out.print(",(F)ind");
         System.out.println(",(Q)uit List Size:"+myList.getSize());
         System.out.println();
-        System.out.println("Type the first letter of your choice capitalized: ");
+        System.out.print("Type the first letter of your choice capitalized: ");
 
         Scanner input = new Scanner(System.in);
         String val = input.nextLine();
-        if(val == "A"){
-            myList.add(word());
+        do {
+            if (val.compareToIgnoreCase("a")==0) {
+                myList.add(word());
+                System.out.println(" was added at location ");
 
-        }else if(val =="D"){
-            myList.delete();
+            } else if (val.compareToIgnoreCase("d")==0) {
+                int temp = rand.nextInt(myList.getSize());
+                myList.delete(temp);
+                System.out.println();
+                System.out.println(" was remove from location " + temp);
+
+            } else if (val.compareToIgnoreCase("f")==0) {
+                System.out.println();
+                System.out.print("What word do you wanna search for? ");
+                Scanner input2 = new Scanner(System.in);
+                String val2 = input2.next();
+                System.out.println();
+                if(myList.find(val2, myList)){
+                }
+                else{
+                    System.out.println();
+                    System.out.print("Word not found");
+                }
+            }
+        }while(val.compareToIgnoreCase("q")==0);{
+            System.exit(0);
 
         }
 

@@ -77,13 +77,18 @@ public class LinkedList {
         }
     }
 
-    public boolean find(String s) {
+    public boolean find(String s, LinkedList myList) {
         Node temp = head;
+        int counter = 1;
         while (temp != null) {
-            if (temp.getValue() == s) {
+            if (s.compareTo(temp.getValue()) == 0) {
+                myList.display();
+                System.out.println();
+                System.out.println(s +" was found at location "+counter);
                 return true;
             } else {
                 temp = temp.getNext();
+                counter++;
             }
         }
         return false;

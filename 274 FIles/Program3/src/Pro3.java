@@ -26,13 +26,17 @@ public class Pro3 {
         do {
             if (val.compareToIgnoreCase("a")==0) {
                 myList.add(word());
-                System.out.println(" was added at location ");
+                System.out.println();
+                myList.display();
+                System.out.println();
 
             } else if (val.compareToIgnoreCase("d")==0) {
                 int temp = rand.nextInt(myList.getSize());
                 myList.delete(temp);
                 System.out.println();
-                System.out.println(" was remove from location " + temp);
+                myList.display();
+                System.out.println();
+
 
             } else if (val.compareToIgnoreCase("f")==0) {
                 System.out.println();
@@ -48,7 +52,8 @@ public class Pro3 {
                 }
             }
         }while(val.compareToIgnoreCase("q")==0);{
-            System.exit(0);
+            System.exit(1);
+            System.out.println("Process finished with exit code 1");
 
         }
 

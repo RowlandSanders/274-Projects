@@ -31,11 +31,13 @@ public class LinkedList {
                 count++;
             }
             prev.setNext(curr.getNext()); //pointing to a new node (skips chosen node)
+            System.out.print(curr.getValue()+" was removed from location "+ count);
+
         }
     }
 
     public int getSize(){
-        int count = 0;
+        int count = 1;
         Node temp = head;
         while(temp!=null){
             count++;
@@ -46,6 +48,7 @@ public class LinkedList {
 
     public void add(String x) {
         Node temp = new Node(x);
+        int count = 1;
         if (head == null) {
             head = temp;
         }
@@ -64,6 +67,7 @@ public class LinkedList {
                     temp.setNext(y.getNext());
                     break;
                 }
+                count++;
 
             }if(z!=null){
                 temp.setNext(z);
@@ -75,6 +79,9 @@ public class LinkedList {
         head = temp;
 
         }
+        System.out.println();
+        System.out.println(x+" was added at location " +count);
+
     }
 
     public boolean find(String s, LinkedList myList) {

@@ -100,4 +100,40 @@ public class LinkedList {
         }
         return false;
     }
+
+    public void addMain(String x) {
+
+        Node temp = new Node(x);
+        int count = 1;
+        if (head == null) {
+            head = temp;
+        }
+        else if (temp.getValue().compareTo(head.getValue())<=0){
+            temp.setNext(head);
+            head = temp;
+        }
+        else if (temp.getValue().compareTo(head.getValue())>0){
+            Node y = head;
+            Node z = head;
+
+            while(temp.getValue().compareTo(z.getValue())>0){
+                y = z;
+                z = z.getNext();
+                if(z==null){
+                    temp.setNext(y.getNext());
+                    break;
+                }
+                count++;
+
+            }if(z!=null){
+                temp.setNext(z);
+            }
+            y.setNext(temp);
+        }
+        else{
+            temp.setNext(head);
+            head = temp;
+
+        }
+    }
 }

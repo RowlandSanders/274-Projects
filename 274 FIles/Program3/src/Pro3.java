@@ -7,7 +7,7 @@ public class Pro3 {
         Random rand = new Random();
         LinkedList myList = new LinkedList();
         for(int i = 0;i<22;i++){
-            myList.add(word());
+            myList.addMain(word());
         }
         System.out.println();
         myList.display();

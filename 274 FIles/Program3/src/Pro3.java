@@ -1,5 +1,11 @@
 import java.util.Random;
 import java.util.Scanner;
+/*
+Rowland Sanders
+CECS 274-05
+Project 3: LinkedList
+3/17/2020
+ */
 
 public class Pro3 {
 

@@ -1,4 +1,10 @@
 public class LinkedList {
+    /*
+Rowland Sanders
+CECS 274-05
+Project 3: LinkedList
+3/17/2020
+ */
     private Node head;
 
     public LinkedList() {

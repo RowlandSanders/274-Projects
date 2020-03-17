@@ -1,4 +1,10 @@
 public class Node {
+    /*
+Rowland Sanders
+CECS 274-05
+Project 3: LinkedList
+3/17/2020
+ */
     String value;
     Node next;
 

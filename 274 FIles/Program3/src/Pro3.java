@@ -20,10 +20,11 @@ public class Pro3 {
         System.out.println(",(Q)uit List Size:"+myList.getSize());
         System.out.println();
         System.out.print("Type the first letter of your choice capitalized: ");
-
-        Scanner input = new Scanner(System.in);
-        String val = input.nextLine();
+        String val = "";
         do {
+            System.out.println();//menu
+            Scanner input = new Scanner(System.in);
+            val = input.nextLine();
             if (val.compareToIgnoreCase("a")==0) {
                 myList.add(word());
                 System.out.println();
@@ -50,12 +51,16 @@ public class Pro3 {
                     System.out.println();
                     System.out.print("Word not found");
                 }
+
             }
-        }while(val.compareToIgnoreCase("q")==0);{
+
+
+        }while(val.compareToIgnoreCase("q")!=0);{
             System.exit(1);
             System.out.println("Process finished with exit code 1");
 
         }
+
 
     }
     public static String word(){

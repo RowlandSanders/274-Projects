@@ -10,7 +10,7 @@ public class LinkedList {
         int count = 1;
         while(temp!=null){
             temp.display();
-            if(count%11==0){
+            if(count%12==0){
                 System.out.println();
             }
             temp=temp.getNext();
@@ -31,7 +31,7 @@ public class LinkedList {
                 count++;
             }
             prev.setNext(curr.getNext()); //pointing to a new node (skips chosen node)
-            System.out.print(curr.getValue()+" was removed from location "+ count);
+            System.out.print(curr.getValue()+" was removed from location "+ (count+1));
 
         }
     }
@@ -91,6 +91,7 @@ public class LinkedList {
             if (s.compareTo(temp.getValue()) == 0) {
                 myList.display();
                 System.out.println();
+                System.out.println(" ");
                 System.out.println(s +" was found at location "+counter);
                 return true;
             } else {

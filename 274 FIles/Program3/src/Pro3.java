@@ -11,18 +11,17 @@ public class Pro3 {
         }
         System.out.println();
         myList.display();
-        System.out.println();
-        System.out.println("What would you like to do with your Linked List");
+        System.out.println(" ");
         System.out.println();
         System.out.print("(A)dd");
         System.out.print(",(D)elete");
         System.out.print(",(F)ind");
-        System.out.println(",(Q)uit List Size:"+myList.getSize());
-        System.out.println();
-        System.out.print("Type the first letter of your choice capitalized: ");
+        System.out.println(",(Q)uit List Size:"+(myList.getSize()-1));
+        System.out.println(" ");
         String val = "";
+
         do {
-            System.out.println();//menu
+            System.out.print(">");//menu
             Scanner input = new Scanner(System.in);
             val = input.nextLine();
             if (val.compareToIgnoreCase("a")==0) {
@@ -30,14 +29,30 @@ public class Pro3 {
                 System.out.println();
                 myList.display();
                 System.out.println();
+                System.out.println();
+                System.out.print("(A)dd");
+                System.out.print(",(D)elete");
+                System.out.print(",(F)ind");
+                System.out.println(",(Q)uit List Size:"+(myList.getSize()-1));
+                System.out.println();
+
 
             } else if (val.compareToIgnoreCase("d")==0) {
+
+                System.out.println();
                 int temp = rand.nextInt(myList.getSize());
                 myList.delete(temp);
+                System.out.println(" ");
                 System.out.println();
                 myList.display();
-                System.out.println();
+                System.out.println(" ");
 
+                System.out.println(" ");
+                System.out.print("(A)dd");
+                System.out.print(",(D)elete");
+                System.out.print(",(F)ind");
+                System.out.println(",(Q)uit List Size:"+(myList.getSize()-1));
+                System.out.println();
 
             } else if (val.compareToIgnoreCase("f")==0) {
                 System.out.println();
@@ -48,16 +63,21 @@ public class Pro3 {
                 if(myList.find(val2, myList)){
                 }
                 else{
-                    System.out.println();
                     System.out.print("Word not found");
+                    System.out.println();
                 }
 
+                System.out.println(" ");
+                System.out.print("(A)dd");
+                System.out.print(",(D)elete");
+                System.out.print(",(F)ind");
+                System.out.println(",(Q)uit List Size:"+(myList.getSize()-1));
+                System.out.println();
             }
 
 
         }while(val.compareToIgnoreCase("q")!=0);{
-            System.exit(1);
-            System.out.println("Process finished with exit code 1");
+            System.exit(-1);
 
         }
 

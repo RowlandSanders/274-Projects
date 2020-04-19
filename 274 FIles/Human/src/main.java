@@ -1,3 +1,4 @@
+import java.net.SocketOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +13,10 @@ public class main {
 
             System.out.print("\nHow tall is your pyramid? (Enter number of rows): ");
             max = in.nextInt();
+
+            System.out.println("");
+            System.out.println("Here is the graph of your pyramid showing the weight each person is holding:");
+            System.out.println("");
 
             for (int row = 1; row <= max; row++) {
                 for (int col = 1; col <= row; col++) {

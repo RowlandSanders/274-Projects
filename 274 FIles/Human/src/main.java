@@ -2,38 +2,64 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
-    public static int rows;
-    public static int count;
-    public static void main (String [] args){
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        String input;
+        Scanner in = new Scanner(System.in);
 
-        System.out.printf("%s%n%s","Welcome to the Human Pyramid.","How tall is your pyramid? (Enter the number of rows): ");
-        rows = scan.nextInt();
+        do {
+            int max;
+            ArrayList<Integer> x = new ArrayList<>();
 
-        for(int i  = 1; i<rows+1; i++){
-            for(int r=0; r<rows+1-i;r++){
-                System.out.print("  ");
+            System.out.print("\nHow tall is your pyramid? (Enter number of rows): ");
+            max = in.nextInt();
+
+            for (int row = 1; row <= max; row++) {
+                for (int col = 1; col <= row; col++) {
+                    x.add((int) weightOnBack(row, col));
+                }
             }
-            for(int k =1; k<=i; k++){
-                System.out.printf("%4d", (int)WeightOnBack(i,k));
-            }
+
+            display(max, x);
             System.out.println();
-            
-        }
+
+            System.out.print("Do you want to run again? (y/n) ");
+            input = in.next();
+
+        }while(input.compareToIgnoreCase("n") != 0 && input.compareToIgnoreCase("y") != 1);
     }
 
-    public static double WeightOnBack(int row, int col) {
-        count++;
-        if (row == 1 && col == 1) {
-            return 0.0;
-        } else if (col == 1) {
-            return (75 + WeightOnBack(row - 1, col) / 2);
-        } else if (col == row) {
-            return (75 + WeightOnBack(row - 1, col - 1) / 2);
-        } else {
-            return (150 + WeightOnBack(row - 1, col - 1)) / 2 + ((150 + WeightOnBack(row - 1, col)) / 2);
+    public static double weightOnBack(int rows, int columns){
+        if(rows == 1 && columns == 1){
+            return 0;
         }
+
+        else if(columns == 1){
+            return(75 + weightOnBack(rows - 1, columns)/2);
+        }
+
+        else if (columns == rows){
+            return(75 + weightOnBack(rows - 1, columns - 1)/2);
+        }
+
+        else{
+            return (150 + weightOnBack(rows - 1, columns - 1))/2 + ((150 + weightOnBack(rows - 1, columns))/2);
+        }
+
     }
 
+    public static void display(int row, ArrayList<Integer> aL){
 
+        int index = 0;
+        for(int i=1; i <= row; i++){
+            for(int j=0; j < (row-i) ; j++){
+                System.out.print("   ");
+            }
+
+            for(int j=0; j < i; j++){
+                System.out.printf("(%4d)", aL.get(index++));
+            }
+
+            System.out.println(" ");
+        }
+    }
 }

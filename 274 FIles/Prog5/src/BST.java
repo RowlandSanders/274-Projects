@@ -3,56 +3,75 @@ import java.util.Scanner;
 
 public class BST {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        boolean loop = true;
-        BST newBST = new BST();
-        while (loop) {
+
+        Scanner in = new Scanner(System.in);
+        boolean state = true;
+
+        BST startBST = new BST();
+
+        while (state) {
+
             int input;
-            System.out.printf("1) Create empty BST\n" +
+            System.out.println(" ");
+            System.out.printf(
+                    "- Main Menu -\n" +
+                    "1) Create empty BST\n" +
                     "2) Add a number to the BST\n" +
                     "3) Add 20 random numbers to your BST\n" +
                     "4) Display the BST in sorted order\n" +
                     "5) Show Stats\n");
-            input = scan.nextInt();
+            System.out.println(" ");
+            input = in.nextInt();
+            System.out.println(" ");
             if (input == 1) {
-                newBST = new BST();
+                System.out.println("New empty BST created");
+                startBST = new BST();
+
             } else if (input == 2) {
-                System.out.println("Add a number to the BST");
-                int num = scan.nextInt();
-                newBST.add(num);
+                System.out.print("What value do you want to add to the BST? ");
+                int num = in.nextInt();
+                startBST.add(num);
+
             } else if (input == 3) {
                 Random rand = new Random();
+
                 for (int i = 0; i < 20; i++) {
-                    newBST.add(1 + rand.nextInt(999 - 1));
+                    startBST.add(1 + rand.nextInt(999 - 1));
                 }
+
             } else if (input == 4) {
-                newBST.display();
+                startBST.display();
                 System.out.println();
+
             } else if (input == 5) {
-                if (newBST.size() == 0 || newBST.root == null) {
+                if (startBST.size() == 0 || startBST.root == null) {
                     System.out.println("There is nothing in the BST");
+
                 } else {
-                    double avg = newBST.sum() / newBST.size();
-                    System.out.printf("1) Root: %d\n" +
-                            "2) Tree height: %d\n" +
-                            "3) Number of items in the tree: %d\n" +
-                            "4) Minimum value: %d\n" +
-                            "5) Maximum value: %d\n" +
-                            "6) Average value: %d\n\n", newBST.root.getValue(), newBST.height(), newBST.size(), newBST.min(), newBST.max(), (int) avg);
+                    double avg = startBST.sum() / startBST.size();
+                    System.out.printf("- Stats -\n" +
+                            "Root: %d\n" +
+                            "Tree height: %d\n" +
+                            "Items in the BST: %d\n" +
+                            "Min value: %d\n" +
+                            "Max value: %d\n" +
+                            "Average value: %d\n\n", startBST.root.getValue(), startBST.height(), startBST.size(), startBST.min(), startBST.max(), (int) avg);
+
                 }
             }
         }
     }
 
-    class Node { //node class start
+    class Node {
+
         private int value;
-        private Node lc;
-        private Node rc;
+        private Node getL;
+        private Node getR;
 
         public Node(int x) {
+            getL = null;
+            getR = null;
             value = x;
-            lc = null;
-            rc = null;
         }
 
         public int getValue() {
@@ -60,24 +79,25 @@ public class BST {
         }
 
         public void setRight(Node n) {
-            rc = n;
+            getR = n;
         }
 
         public void setLeft(Node n) {
-            lc = n;
+            getL = n;
         }
 
         public Node getRight() {
-            return rc;
+            return getR;
         }
 
         public Node getLeft() {
-            return lc;
+            return getL;
         }
     }
 
-    public int size() {   //size of the tree
+    public int size() {
         if (root == null) {
+
             return 0;
         } else {
             return 1 + size(root.getLeft()) + size(root.getRight());
@@ -86,6 +106,7 @@ public class BST {
 
     private int size(Node n) {
         if (n == null) {
+
             return 0;
         } else {
             return 1 + size(n.getLeft()) + size(n.getRight());
@@ -94,6 +115,7 @@ public class BST {
 
     public int sum() {
         if (root == null) {
+
             return 0;
         } else {
             return root.getValue() + sum(root.getLeft()) + sum(root.getRight());
@@ -102,6 +124,7 @@ public class BST {
 
     private int sum(Node n) {
         if (n == null) {
+
             return 0;
         } else {
             return n.getValue() + sum(n.getLeft()) + sum(n.getRight());
@@ -110,6 +133,7 @@ public class BST {
 
     public int height() {
         if (root == null) {
+
             return 0;
         } else {
             return 1 + Math.max(height(root.getLeft()), height(root.getRight()));
@@ -118,6 +142,7 @@ public class BST {
 
     private int height(Node n) {
         if (n == null) {
+
             return 0;
         } else {
             return 1 + Math.max(height(n.getLeft()), height(n.getRight()));
@@ -125,28 +150,30 @@ public class BST {
     }
 
     public int min() {
-        if (root.lc == null) {
+        if (root.getL == null) {
+
             return root.getValue();
         }
         return min(root.getLeft());
     }
 
     private int min(Node n) {
-        if (n.lc == null) {
+        if (n.getL == null) {
+
             return n.getValue();
         }
         return min(n.getLeft());
     }
 
     public int max() {
-        if (root.rc == null) {
+        if (root.getR == null) {
             return root.getValue();
         }
         return max(root.getRight());
     }
 
     private int max(Node n) {
-        if (n.rc == null) {
+        if (n.getR == null) {
             return n.getValue();
         }
         return max(n.getRight());
@@ -160,8 +187,10 @@ public class BST {
 
     public void display() {
         if (root == null) {
-            System.out.println("Empty Tree");
+            System.out.println("The Tree is Empty");
+
         } else {
+            System.out.println("- Values - ");
             display(root);
         }
     }
@@ -170,42 +199,50 @@ public class BST {
         if (n == null) {
             return;
         } else {
-            display(n.lc);
-            System.out.print(n.getValue() + ", ");
-            display(n.rc);
+            display(n.getL);
+            System.out.print(n.getValue() + "  ");
+            display(n.getR);
         }
     }
 
     public void add(int x) {
         if (root == null) {
             root = new Node(x);
-            System.out.println("New root: " + x);
+            System.out.println("New root value: " + x);
         } else {
-            System.out.println("\nAdding: " + x);
+            System.out.println("\nAdding value: " + x);
             add(root, x);
         }
     }
 
     private void add(Node n, int x) {
         if (x == n.getValue()) {
-            System.out.println("Duplicate Value " + x + " will not be added");
+            System.out.println("This is a duplicate value, value " + x + " will not be added");
+
         } else {
-            System.out.println("Parent: " + n.getValue() + " New Value: " + x);
+            System.out.println("Parent: " + n.getValue() + ", New Value: " + x);
+
             if (x < n.getValue()) {
-                System.out.println("go left");
-                if (n.lc == null) {
-                    System.out.println("Left child is empty. Add " + x + " here");
-                    n.lc = new Node(x);
+                System.out.println("Next check, left");
+                System.out.println(" ");
+
+                if (n.getL == null) {
+                    System.out.println("Next left child is empty. Value " + x + " added here");
+                    n.getL = new Node(x);
                 } else {
-                    add(n.lc, x);
+                    add(n.getL, x);
                 }
             } else {
-                System.out.println("Go right");
-                if (n.rc == null) {
-                    System.out.println("Right Child is empty. Add " + x + "here");
-                    n.rc = new Node(x);
+                System.out.println("Next check, right");
+                System.out.println(" ");
+
+                if (n.getR == null) {
+
+                    System.out.println("Next right Child is empty. Value " + x + " added here");
+                    n.getR = new Node(x);
+
                 } else {
-                    add(n.rc, x);
+                    add(n.getR, x);
                 }
             }
         }

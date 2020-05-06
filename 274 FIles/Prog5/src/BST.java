@@ -1,18 +1,18 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class BST {
-    public static void main(String[] args) {
+public class BST { //node and BST in the same class
+    public static void main(String[] args) { //main
 
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); //Scanner for inputs
         boolean state = true;
 
-        BST startBST = new BST();
+        BST startBST = new BST(); //for making a new BST
 
         while (state) {
 
             int input;
-            System.out.println(" ");
+            System.out.println(" "); // menu creation based on format
             System.out.printf(
                     "- Main Menu -\n" +
                     "1) Create empty BST\n" +
@@ -23,27 +23,28 @@ public class BST {
             System.out.println(" ");
             input = in.nextInt();
             System.out.println(" ");
-            if (input == 1) {
+
+            if (input == 1) { //making a new BST
                 System.out.println("New empty BST created");
                 startBST = new BST();
 
-            } else if (input == 2) {
+            } else if (input == 2) { //adding a value to the BST
                 System.out.print("What value do you want to add to the BST? ");
                 int num = in.nextInt();
                 startBST.add(num);
 
-            } else if (input == 3) {
+            } else if (input == 3) { //adding 20 random ints to the BST
                 Random rand = new Random();
 
                 for (int i = 0; i < 20; i++) {
-                    startBST.add(1 + rand.nextInt(999 - 1));
+                    startBST.add(1 + rand.nextInt(1000 - 0));
                 }
 
-            } else if (input == 4) {
+            } else if (input == 4) { //displaying current BST
                 startBST.display();
                 System.out.println();
 
-            } else if (input == 5) {
+            } else if (input == 5) { //showing the stats he gave us
                 if (startBST.size() == 0 || startBST.root == null) {
                     System.out.println("There is nothing in the BST");
 
@@ -55,14 +56,14 @@ public class BST {
                             "Items in the BST: %d\n" +
                             "Min value: %d\n" +
                             "Max value: %d\n" +
-                            "Average value: %d\n\n", startBST.root.getValue(), startBST.height(), startBST.size(), startBST.min(), startBST.max(), (int) avg);
+                            "Average value: %d\n\n", startBST.root.getValue(), startBST.height(), startBST.size(), startBST.min(), startBST.max(), (int) avg); //stat menu
 
                 }
             }
         }
     }
 
-    class Node {
+    class Node { //node class for adding the values / setting the new nodes
 
         private int value;
         private Node getL;
@@ -104,7 +105,7 @@ public class BST {
         }
     }
 
-    private int size(Node n) {
+    private int size(Node n) { //node size
         if (n == null) {
 
             return 0;
@@ -122,7 +123,7 @@ public class BST {
         }
     }
 
-    private int sum(Node n) {
+    private int sum(Node n) { //adding for average
         if (n == null) {
 
             return 0;
@@ -140,7 +141,7 @@ public class BST {
         }
     }
 
-    private int height(Node n) {
+    private int height(Node n) { //getting the height for the BST
         if (n == null) {
 
             return 0;
@@ -187,10 +188,10 @@ public class BST {
 
     public void display() {
         if (root == null) {
-            System.out.println("The Tree is Empty");
+            System.out.println("The Tree is Empty"); //if the tree is empty
 
         } else {
-            System.out.println("- Values - ");
+            System.out.println("- Values - "); //stat data
             display(root);
         }
     }
@@ -205,40 +206,32 @@ public class BST {
         }
     }
 
-    public void add(int x) {
+    public void add(int x) { //adding to the adding root node
         if (root == null) {
             root = new Node(x);
             System.out.println("New root value: " + x);
+
         } else {
-            System.out.println("\nAdding value: " + x);
             add(root, x);
         }
     }
 
-    private void add(Node n, int x) {
+    private void add(Node n, int x) { //addition functions
         if (x == n.getValue()) {
             System.out.println("This is a duplicate value, value " + x + " will not be added");
 
         } else {
-            System.out.println("Parent: " + n.getValue() + ", New Value: " + x);
 
             if (x < n.getValue()) {
-                System.out.println("Next check, left");
-                System.out.println(" ");
-
                 if (n.getL == null) {
-                    System.out.println("Next left child is empty. Value " + x + " added here");
                     n.getL = new Node(x);
                 } else {
                     add(n.getL, x);
                 }
             } else {
-                System.out.println("Next check, right");
-                System.out.println(" ");
 
                 if (n.getR == null) {
 
-                    System.out.println("Next right Child is empty. Value " + x + " added here");
                     n.getR = new Node(x);
 
                 } else {

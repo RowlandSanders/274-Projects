@@ -26,7 +26,7 @@ public class main {
                 return true;
             }
             else {
-                System.out.println("Loser");
+                System.out.println("Loser");xxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 return false;
             }
         }
